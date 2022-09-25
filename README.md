@@ -1,0 +1,4 @@
+- git clone
+- npm install masing-masing folder, kecuali folder FILTER_DENOM_SERA
+- npm start masing-masing folder untuk menjalankan apilikasi, tetapi untuk folder UNIT_TESTING_SERA jalankan perintah npm run test
+- untuk melihat dokumentasi API sudah disediakan FILE POSTMAN dalam folder dokumentasi yang berada di masing-masing folder
