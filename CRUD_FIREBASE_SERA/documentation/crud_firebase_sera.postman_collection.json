@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "b7dc3e06-4538-434d-adba-8fa8c73d073e",
+		"name": "crud_firebase_sera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18159603"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/list-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/list-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"list-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/get-user/QYR4wdoN2Ve14NgA3j9b",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-user/QYR4wdoN2Ve14NgA3j9b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-user",
+						"QYR4wdoN2Ve14NgA3j9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Raditha Nur Nafisah\",\r\n    \"age\":22,\r\n    \"address\":\"Bekasi\",\r\n    \"profession\":\"Mahasiswa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/add-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/update-user/2NWWt9Tf0jqtw1XNluZL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n                \"profession\": \"Mahasiswa updated\",\r\n                \"age\": 22,\r\n                \"address\": \"Bekasi updated\",\r\n                \"username\": \"Raditha Nur\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/update-user/2NWWt9Tf0jqtw1XNluZL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-user",
+						"2NWWt9Tf0jqtw1XNluZL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/delete-user/ZP1Us6gaGrIv4cCAINWn",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/delete-user/ZP1Us6gaGrIv4cCAINWn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete-user",
+						"ZP1Us6gaGrIv4cCAINWn"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "372c7f9c-446f-4558-9772-acb43864e6c3",
+		"name": "crud_mongodb_sera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18159603"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/add-vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\":\"Lamborghini xxxxxxxxxx\",\r\n    \"desc\":\"Lambo from japan \",\r\n    \"car\":[\r\n        {\r\n            \"name\":\"CR-V\",\r\n            \"price\":400000000,\r\n            \"size\":\"8 people\",\r\n            \"Cc\":37000\r\n        },{\r\n            \"name\":\"HR-V\",\r\n            \"price\":270000000,\r\n            \"size\":\"5 people\",\r\n            \"Cc\":2700\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/list-vehicle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/list-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"list-vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/list-vehicle/632ef4967505ce99828565aa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/list-vehicle/632ef4967505ce99828565aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"list-vehicle",
+						"632ef4967505ce99828565aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/update-vehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"632ef4967505ce99828565aa\",\r\n    \"brand\":\"Lamborghini updated xx\",\r\n    \"desc\":\"Lambo from italy not japan \",\r\n    \"car\":[\r\n        {\r\n            \"name\":\"Aventador\",\r\n            \"price\":9000000000,\r\n            \"size\":\"2 people\",\r\n            \"Cc\":4700\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/delete-vehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"63301cab855f6c08e727fe18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/vehicle-add-car/632ef4967505ce99828565aa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"car\":[\r\n        {\r\n            \"name\":\"Mobil Test\",\r\n            \"price\":90000000,\r\n            \"size\":\"3 people\",\r\n            \"Cc\":1700\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/vehicle-add-car/632ef4967505ce99828565aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicle-add-car",
+						"632ef4967505ce99828565aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/vehicle-delete-car/632dd0f6f55afb5d1a9f4d54",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carId\":\"632fe23981717fc7820e2baf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/vehicle-delete-car/632dd0f6f55afb5d1a9f4d54",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicle-delete-car",
+						"632dd0f6f55afb5d1a9f4d54"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/vehicle-update-car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car\":\r\n    [ \r\n        {\r\n                \"name\": \"Alphard\",\r\n                \"price\": 900000000,\r\n                \"size\": \"19 people\",\r\n                \"Cc\": 3500,\r\n                \"_id\": \"632f05e6cf1db355f734d847\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/vehicle-update-car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicle-update-car"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

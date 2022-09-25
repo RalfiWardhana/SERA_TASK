@@ -1,0 +1,28 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha --exit --recursive --timeout 1000000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^7.13.0",
+    "@sentry/tracing": "^7.13.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.16.4",
+    "joi": "^17.6.1",
+    "mocha": "^5.2.0",
+    "mockgoose": "^7.3.5",
+    "mongoose": "^5.4.1",
+    "supertest": "^3.3.0"
+  }
+}

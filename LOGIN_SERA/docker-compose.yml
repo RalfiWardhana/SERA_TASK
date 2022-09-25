@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  mongo_db_login:
+    container_name: dbmongo_container_login
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db_login:/data/db
+
+  nodejs-app-login:
+    build: .
+    container_name: nodejsserver_login
+    ports:
+      - 4000:4000
+    volumes: 
+      - .:/usr/src/app  
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb+srv://ralfiwardhana789:TDtMxpfwVvzyYq1k@cluster0.xwkcjit.mongodb.net/?retryWrites=true&w=majority
+    depends_on:
+      - mongo_db_login
+
+volumes:
+  mongo_db_login: {}

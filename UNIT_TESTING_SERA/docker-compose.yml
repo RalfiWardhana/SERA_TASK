@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  mongo_db_testing:
+    container_name: dbmongo_container_testing
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db_testing:/data/db
+
+  nodejs-app-testing:
+    build: .
+    container_name: nodejsserver_testing
+    ports:
+      - 3005:3005
+    volumes: 
+      - .:/usr/src/app  
+    environment:
+      PORT: 3005
+      MONGODB_URI: mongodb+srv://ralfiwardhana789:TDtMxpfwVvzyYq1k@cluster0.xwkcjit.mongodb.net/?retryWrites=true&w=majority
+    depends_on:
+      - mongo_db_testing
+
+volumes:
+  mongo_db_testing: {}
